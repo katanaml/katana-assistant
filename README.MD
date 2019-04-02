@@ -1,4 +1,4 @@
-Katana Assistant - Machine Learning based agent, provides business automation
+Katana Assistant - Machine Learning based agent, helps to enable business automation
 
 Technology: TensorFlow, Keras, Flask, Python, Node.js, JavaScript
 
