@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+  Copyright (c) 2015, 2018, Oracle and/or its affiliates.
+  The Universal Permissive License (UPL), Version 1.0
+-->
+
+
+<html lang="en-us">
+  <head>
+    <title>Oracle JET Starter QUnit - Common Composite Component</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../css/images/favicon.ico">
+
+    <link rel="stylesheet" href="../js/libs/qunit/qunit.css">
+    <script type="text/javascript" src="../js/libs/qunit/qunit.js"></script>
+    <script>
+        QUnit.config.autoload = false;
+        QUnit.config.autostart = false;
+        QUnit.config.testTimeout = 6000;
+    </script>
+    <script type="text/javascript" src="../js/libs/qunit/qunit-reporter-junit.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" src="../js/libs/require/require.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <div id="qunit"></div>
+
+    <h1 id="qunit-header">Composite Component Tests</h1>
+
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar"></div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    <div id="qunit-fixture">
+
+      <div id="composite-container">
+
+      </div>
+
+      <script>
+        require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojcomposite', 'jet-composites/bot-ui/loader'],
+        function(oj, ko, $) {
+          function model() {      
+          }
+
+          $(function() 
+          {
+            ko.applyBindings(new model(), document.getElementById('composite-container'));
+          });
+
+        });
+      </script>
+      
+    </div>
+    
+  </body>
+
+</html>

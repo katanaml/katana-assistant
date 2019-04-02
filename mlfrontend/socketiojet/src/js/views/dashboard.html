@@ -1,0 +1,21 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+ <div id="wrapperDiv" class="oj-offcanvas-outer-wrapper oj-flex" style="padding-top: 5px;">
+  <div id="innerCanvas" class="oj-flex-item oj-sm-8 oj-xl-9 oj-flex oj-sm-flex-1">
+    <div id="mContent" class="oj-sm-web-padding-vertical oj-md-down-web-padding-horizontal oj-lg-only-web-padding-end oj-lg-padding-2x-start oj-xl-padding-2x-end oj-flex-item oj-sm-12 oj-lg-12">
+      <div id="content">
+        <div class="oj-flex" id="mainContent">
+          <div class="oj-flex-item">
+            <div class="oj-flex oj-sm-only-flex-direction-column oj-sm-flex-items-initial">
+              <div data-bind="ojModule: centralModule()"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <bot-client id="bc1" on-handle-bot="[[handleBot]]"
+    class="oj-flex-item oj-sm-3 oj-md-6 oj-lg-4 oj-xl-3 oj-panel"/>
+</div>

@@ -1,0 +1,47 @@
+<!--
+  Copyright (c) 2015, 2018, Oracle and/or its affiliates.
+  The Universal Permissive License (UPL), Version 1.0
+-->
+<div class="oj-flex">
+  <div id="chatview" class="oj-flex-item" style="overflow-y: scroll;">
+    <div data-bind="style: {'height': chatbotAreaHeight}" >
+      <p data-bind="visible: chatItems().length===0">No messages</p>
+      <div id="chatlist" data-bind="if: chatItems">
+        <div data-bind="template: { name: 'chat_template', foreach: chatItems, as: 'item' }"></div>
+      </div>
+    </div>
+  </div>
+  <div class="oj-flex-item" style="padding-top: 10px;">
+    <div class="oj-flex">
+      <div class="oj-flex-item" style="padding-right: 2px;">
+        <oj-input-text id="it1" value="{{userText}}" placeholder='Type a message' style="width:240px"/>
+      </div>
+      <div class="oj-flex-item">
+        <oj-button display='icons' on-click='[[sendEvent]]'>
+          <span slot='startIcon' class="oj-fwk-icon-caret-e demo-icon-font-24"></span>
+          Send
+        </oj-button>
+        <oj-button display='icons' on-click='[[resetContext]]'>
+          <span slot='startIcon' class="oj-fwk-icon-dots-horizontal oj-fwk-icon"></span>
+          Reset
+        </oj-button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/html" id="chat_template">
+  <div class="oj-flex-items-pad" style="margin: 5px" data-bind="if: bot">
+    <div class="oj-flex oj-sm-justify-content-flex-start oj-sm-flex-items-initial">
+      <div class="oj-flex-item wordwrap">
+        <span class="from-them" data-bind="text: item.payload"></span>
+      </div>
+    </div>
+  </div>
+  <div class="oj-flex-items-pad" style="margin: 5px" data-bind="if: !bot">
+    <div class="oj-flex oj-sm-justify-content-flex-end oj-sm-flex-items-initial">
+      <div class="oj-flex-item wordwrap">
+        <span class="from-me"><span data-bind="text: item.payload"></span></span>
+      </div>
+    </div>
+  </div>
+</script>

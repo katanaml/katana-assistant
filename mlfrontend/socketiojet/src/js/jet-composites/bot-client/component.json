@@ -1,0 +1,31 @@
+{
+  "name": "bot-client",
+  "displayName": "bot-client",
+  "description": "Describe your component here",
+  "version": "1.0.0",
+  "jetVersion": "4.2.0",
+  "properties": {
+  },
+  "methods": {
+
+  },
+  "events": {
+    "handleBot": {
+      "description": "Triggered when message is received from bot",
+      "bubbles": true,
+      "detail": {
+        "botintent": {
+          "description": "bot intent",
+          "type": "string"
+        },
+        "botparams": {
+          "description": "bot params",
+          "type": "object"
+        }
+      }
+    }
+  },
+  "slots": {
+
+  }
+}

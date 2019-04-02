@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<html lang="en-us">
+  <head>
+    <title>Oracle JET Starter Template - Web Nav Drawer</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1">
+    <link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+
+    <!-- This is the main css file for the default Alta theme -->
+    <!-- injector:theme -->
+    <link rel="stylesheet" href="css/libs/oj/v4.2.0/alta/oj-alta-min.css" type="text/css"/>
+    <!-- endinjector -->
+
+    <!-- This contains icon fonts used by the starter template -->
+    <link rel="stylesheet" href="css/demo-alta-site-min.css" type="text/css"/>
+
+    <!-- This is where you would add any app specific styling -->
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+
+  </head>
+  <body class="oj-web-applayout-body">
+    <div id="page" class="oj-web-applayout-page demo-offcanvas-page">
+      <header role="banner" class="oj-web-applayout-header">
+        <div id="header" class="oj-web-applayout-max-width oj-flex-bar oj-sm-align-items-center">
+          <div class="oj-flex-bar-middle oj-sm-align-items-baseline">
+            <h1 class="oj-sm-only-hide oj-web-applayout-header-title" title="Application Name" data-bind="text: appName"></h1>
+          </div>
+          <div class="oj-flex-bar-end">
+            <!--Responsive Toolbar-->
+            <oj-toolbar>
+              <oj-menu-button id="userMenu" display="[[smScreen() ? 'icons' : 'all']]" chroming="half">
+                <span data-bind="text: userLogin"></span>
+                <span slot="endIcon" data-bind="css: smScreen() ? 'oj-icon demo-avatar-icon' : 'oj-component-icon oj-button-menu-dropdown-icon'"></span>
+                <oj-menu id="menu1" slot="menu" style="display:none">
+                  <oj-option value="settings">Settings</oj-option>
+                  <oj-option value="help">Help</oj-option>
+                  <oj-option value="about">About</oj-option>
+                  <oj-option value="out">Sign Out</oj-option>
+                </oj-menu>
+              </oj-menu-button>
+            </oj-toolbar>
+          </div>
+        </div>
+      </header>
+      <div id="content" role="main" data-bind="ojModule: router.moduleConfig" class="oj-web-applayout-main oj-web-applayout-max-width oj-flex oj-sm-flex-1" style="overflow-y:auto"></div>
+    </div>
+
+    <script type="text/javascript" src="js/libs/require/require.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+  </body>
+
+</html>

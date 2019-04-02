@@ -1,0 +1,21 @@
+{
+  "name": "socketiojet",
+  "version": "1.0.0",
+  "description": "An Oracle JavaScript Extension Toolkit(JET) web app",
+  "dependencies": {
+    "@oracle/oraclejet": "~4.2.0",
+    "socket.io-client": "*"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "@oracle/grunt-oraclejet": "~4.2.0",
+    "load-grunt-config": "0.19.2",
+    "@oracle/oraclejet-tooling": "~4.2.0",
+    "qunit-reporter-junit": "^1.1.1",
+    "qunitjs": "^2.3.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": true
+}

@@ -1,0 +1,33 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Adverse Drugs Module</h1>
+  <div>
+    <oj-table id='table' aria-label='Departments Table'
+                                      data='[[dataprovider]]'
+                                      selection-mode='{"row": "multiple", "column": "multiple"}'
+                                      dnd='{"reorder": {"columns": "enabled"}}'
+                                      scroll-policy='loadMoreOnScroll'
+                                      scroll-policy-options='{"fetchSize": 10}'
+                                      columns='[{"headerText": "Drug ID",
+                                                 "field": "DepartmentId",
+                                                 "headerClassName": "oj-sm-only-hide",
+                                                 "className": "oj-sm-only-hide",
+                                                 "resizable": "enabled"},
+                                                {"headerText": "Drug Name",
+                                                 "field": "DepartmentName",
+                                                 "resizable": "enabled"},
+                                                {"headerText": "Code",
+                                                 "field": "LocationId",
+                                                 "headerClassName": "oj-sm-only-hide",
+                                                 "className": "oj-sm-only-hide",
+                                                 "resizable": "enabled"},
+                                                {"headerText": "Alt Code",
+                                                 "field": "ManagerId",
+                                                 "resizable": "enabled"}]'
+                                      style='height: 400px;'>
+      </oj-table>
+  </div>
+</div>
